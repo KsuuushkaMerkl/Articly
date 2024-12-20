@@ -33,5 +33,10 @@ class SettingsResponseSchema(BaseModel):
     languages: list[str]
     social: list[str]
 
-class DeleteUserSchema(BaseModel):
+class DeleteUserRequestSchema(BaseModel):
     id: UUID
+    password: str
+
+
+class DeleteUserResponseSchema(BaseModel):
+    detail: str
