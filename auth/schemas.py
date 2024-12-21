@@ -34,7 +34,6 @@ class SettingsResponseSchema(BaseModel):
     social: list[str]
 
 class DeleteUserRequestSchema(BaseModel):
-    id: UUID
     password: str
 
 

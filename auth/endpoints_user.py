@@ -43,6 +43,9 @@ async def delete_account(
         user=Depends(manager)
 ):
     us = db.query(User).get(user.id)
+    if not us:
+        raise HTTPException(status_code=404, detail="Пользователь не найден")
+
     if not pwd_context.verify(data.password, us.password):
         raise HTTPException(status_code=400, detail="Неверный пароль")
 
