@@ -10,7 +10,7 @@ from starlette.requests import Request
 from auth.security import manager, limiter  # noqa
 
 from core.database import get_session  # noqa
-from event.models import Event  # noqa
+from event.models import Event
 from event.schemas import EventSchema, CreateEventRequestSchema, CreateEventResponseSchema, UpdateEventRequestSchema, UpdateEventResponseSchema  # noqa
 
 
